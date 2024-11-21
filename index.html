@@ -388,6 +388,8 @@
                 const encode = (value) => {
                     return LZString.compressToEncodedURIComponent(value);
                 };
+                
+                const token = urlParams.get("token") || null;
 
                 const formData = {
                     name: name,
@@ -395,7 +397,8 @@
                     phone: phone,
                     company: company,
                     purpose: purpose,
-                    visit_time: startDate
+                    visit_time: startDate,
+                    token: token
                 };
 
                 const qrValue = JSON.stringify(formData);
