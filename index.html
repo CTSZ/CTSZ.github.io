@@ -389,6 +389,7 @@
                     return LZString.compressToEncodedURIComponent(value);
                 };
                 
+                const urlParams = new URLSearchParams(window.location.search);
                 const token = urlParams.get("token") || null;
 
                 const formData = {
